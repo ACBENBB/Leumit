@@ -9,7 +9,7 @@ public class DemoGuru99 extends BasePage {
 
     @FindBy(xpath = "//div[@id='navbar-brand-centered']")
     WebElement upperMenu;
-// comment
+
     String headerPattern = "//div[@id='navbar-brand-centered']//a[contains(text(),'%s')]";
 
     public DemoGuru99(WebDriver driver) {
@@ -27,7 +27,6 @@ public class DemoGuru99 extends BasePage {
         if (subMenu != null || !subMenu.equals("")){
                 String menuXpath = String.format(headerPattern, subMenu);
                 click(driver.findElement(By.xpath(menuXpath)));
-
         }
     }
 }
